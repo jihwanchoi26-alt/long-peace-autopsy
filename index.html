@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>부검참관보고서 — 「긴 평화」의 죽음</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/src/styles.css">
+</head>
+<body>
+
+<canvas id="gl"></canvas>
+<div class="vignette"></div><div class="grain"></div>
+
+<header class="hud-top">
+  <h1>부검참관보고서</h1>
+  <span class="case-no">CASE 1914-0628 · 「긴 평화(1871–1914)」</span>
+  <ul class="steps" id="steps">
+    <li data-s="0" class="on">외표검사</li><li data-s="1">내부검사</li>
+    <li data-s="2">37일</li><li data-s="3">사인판정</li>
+  </ul>
+</header>
+
+<div class="reticle" id="reticle"></div>
+<div class="aim" id="aim"></div>
+
+<div class="hud-bottom">
+  <span class="hint" id="hint">시신에 다가가 가슴의 총상을 조준하십시오.</span>
+  <span class="action" id="action" hidden></span>
+</div>
+
+<section class="clipboard" id="clipboard">
+  <div class="clip-head">
+    <span class="clip-metal" aria-hidden="true"></span>
+    <span class="k" id="docTitle">검안 개요</span>
+    <span class="sub" id="docSub">AUTOPSY OBSERVATION REPORT</span>
+    <span class="tab-hint">Tab</span>
+  </div>
+  <div class="scroll" id="scroll"><div id="view"></div></div>
+</section>
+
+<div class="veil" id="veil">
+  <div class="veil-card">
+    <p class="place">수술실 · 제3호실</p>
+    <p class="go">화면을 클릭하면 검안을 시작합니다</p>
+    <p class="keys">
+      이동 <b>W A S D</b> · 뛰기 <b>Shift</b> · 둘러보기 <b>마우스</b><br>
+      검안 <b>E</b> · 진행 <b>F</b> · 서류철 <b>Tab</b> · 빠져나오기 <b>Esc</b>
+    </p>
+  </div>
+</div>
+
+<div class="loader" id="loader">수술실 조명 점등 중…</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
