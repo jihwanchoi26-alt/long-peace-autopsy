@@ -67,6 +67,14 @@ npm run check:dist
 빌드한 `dist` 를 하위 경로에서 서빙해 `glb`·DRACO 디코더가 실제로 200 으로 오는지,
 4xx 나 페이지 오류가 없는지 본다(`BASE_PATH=/autopsy/ npm run build` 로 빌드한 뒤 실행).
 
+배포된 실제 사이트도 같은 방식으로 확인할 수 있다:
+
+```bash
+npm run check:dist -- https://jihwanchoi26-alt.github.io/long-peace-autopsy/
+```
+
+현재 배포 주소: <https://jihwanchoi26-alt.github.io/long-peace-autopsy/>
+
 ## 성능 측정
 
 ```bash
